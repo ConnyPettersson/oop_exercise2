@@ -37,9 +37,11 @@ public class ZooApp {
         String name = sc.nextLine();
         System.out.println("Enter the animal's species: ");
         String species = sc.nextLine();
-        Animal newAnimal = new Animal(name, species);
+        System.out.println("Add your color:" );
+        String color = sc.nextLine();
+        Animal newAnimal = new Animal(name, species, color);
         animals.add(newAnimal);
-        System.out.println("Animal " + newAnimal.getName() + ", " + newAnimal.getSpecies() + " is added");
+        System.out.println("Animal " + newAnimal.getName() + ", " + newAnimal.getSpecies() + ", " + newAnimal.getColor() + " is added");
         while(true) {
             System.out.println("Do you want to add another animal press y , otherwise press n");
             String response = sc.nextLine();
@@ -50,9 +52,11 @@ public class ZooApp {
                 name = sc.nextLine();
                 System.out.println("Enter the animal's species: ");
                 species = sc.nextLine();
-                Animal anotherAnimal = new Animal(name, species);
+                Animal anotherAnimal = new Animal(name, species, color);
+                System.out.println("Add your color:" );
+                color = sc.nextLine();
                 animals.add(anotherAnimal);
-                System.out.println("Animal " + anotherAnimal.getName() + ", " + anotherAnimal.getSpecies() + " is added");
+                System.out.println("Animal " + anotherAnimal.getName() + ", " + anotherAnimal.getSpecies() + ", " + anotherAnimal.getColor() + " is added");
             }else {
                 System.out.println("You must enter y or n!");
             }
